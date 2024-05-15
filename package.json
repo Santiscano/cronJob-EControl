@@ -1,0 +1,29 @@
+{
+  "name": "crobjob-scanner-e-control",
+  "version": "1.0.0",
+  "description": "tarea sincrona para ejecutar una tarea cada minuto",
+  "main": "index.js",
+  "scripts": {
+    "allDatabaseMySQL": "ts-node-dev --transpile-only src/commands/allDatabaseMySQL.ts",
+    "build": "tsc",
+    "crudMongo": "ts-node-dev --transpile-only src/commands/crudMongo.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "swagger": "ts-node-dev --transpile-only src/documentation/swaggerScript.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
+    "puppeteer": "^22.8.2"
+  },
+  "devDependencies": {
+    "@types/node-cron": "^3.0.11",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "keywords": [],
+  "author": "Santiago-sierra-cano",
+  "license": "ISC"
+}
