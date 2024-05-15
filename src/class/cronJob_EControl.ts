@@ -11,7 +11,7 @@ export class CronJobEControl {
       console.log(`a las ${new Date()}, visito la url: ${url}`)
       
       const browser = await puppeteer.launch({
-        headless: false,
+        headless: "shell",
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
       });
       
